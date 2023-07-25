@@ -1,4 +1,4 @@
-namespace CategoryService
+namespace WriteService
 {
     public class WeatherForecast
     {

@@ -112,10 +112,66 @@
 			- docker ps -a
 		- Making docker image ready for deployment
 			- Tag the image to the Repository NAme
-				- docker tage [IMAGE-NAME]:[TAG] [REPOSITORY-NAME]/[IMAGE-NAME]:[TAG]
+				- docker tag [IMAGE-NAME]:[TAG] [REPOSITORY-NAME]/[IMAGE-NAME]:[TAG]
 			- PUSH the image to the Repository
 				- docker push [REPOSITORY-NAME]/[IMAGE-NAME]:[TAG]
 			- Pull an image
 				-   docker pull [REPOSITORY-NAME]/[IMAGE-NAME]:[TAG]
 - Docker Repository
 		- https://hub.docker.com	
+
+# DOcker COmpose
+- Build and Run Multiple Images
+	- Allocate the Processor
+	- Allocate memory
+	- Register Network Resources on-premises
+- docker-compose.yml file
+	- uses individual docker files for each service
+	- BUild IMages
+	- Allocate Resources
+	- COnfigure Network
+	- STart Images by allocating ports
+- Commands
+	- docker-compose up
+		- load Dockerfile for each service
+		- BUild Image
+		- If exists any dependencies then those will be resolved
+		- ALlocate Network Resources
+		- Expose Services on Ports
+	- docker-compose down
+
+# Best Practices while working with Microservices
+- Database
+	- MUST be avaialble from the public Endpoint
+		- Cloud	
+	- ENtityFrameworkCore, the ORM
+		- Microsoft.EnttyFrameworkCore 
+		- Microsoft.EnttyFrameworkCore.SqlServer
+		- Microsoft.EnttyFrameworkCore.Relational
+		- Microsoft.EnttyFrameworkCore.Design
+		- Microsoft.EnttyFrameworkCore.Tools  
+- Publishing Microservice for Production
+	- Exposing Microservices with Gateway
+		- Programatically
+			- Create Gateway Explicitly
+				- Ocelot
+			- Up-time management of Microservices
+				- Retry Policies
+					- Resiliancy 
+				- Circuit Breaker Pattern 
+		- From the deployment ENv
+			- Serverless 
+	- Communication Pattern Across Microservices, DDD
+		- Synchronous
+			- HTTP COmmuncation across, 
+		- Async
+			- Infra Services
+				- RabbitMQ
+				- ASB
+				- SQS
+				- Kafka
+			
+
+
+
+

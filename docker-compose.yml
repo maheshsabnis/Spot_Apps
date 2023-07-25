@@ -1,0 +1,18 @@
+version: "3.9"
+services:
+
+  cateoryapi:
+      container_name: catapicont
+      ports:
+          - 9081:80
+      build: CategoryService  # Project Folder Path
+      image: catapi:v1
+
+  productapi:
+      container_name: prdapicont
+      ports:
+          - 9082:80
+      build: ProductService  # Project Folder Path
+      image: prdapi:v1  
+
+

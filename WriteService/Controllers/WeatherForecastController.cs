@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace CategoryService.Controllers
+namespace WriteService.Controllers
 {
     [ApiController]
     [Route("[controller]")]
