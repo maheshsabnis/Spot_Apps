@@ -7,7 +7,7 @@
 			- CategoryName
 			- ManufacturerName
 			- ProductName
-			- All POsiible ANG and OR Combinations on above criterias
+			- All POsiible AND and OR Combinations on above criterias
 	- The Second API should update the Record from XML Document
 		- xLinq
 
