@@ -9,6 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<EShoppingCodiContext>(options => 
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("AppConn"));
+   
 });
 
 builder.Services.AddScoped<IRepoService<Category,int>, CategoryRepoService>();

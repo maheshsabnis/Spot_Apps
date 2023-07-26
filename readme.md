@@ -144,6 +144,8 @@
 - Database
 	- MUST be avaialble from the public Endpoint
 		- Cloud	
+	- CReate Separate deployable services for Read and Write
+		- Command (Write)-Query(Read)-Responsibility-Seggrigation (CQRS)	
 	- ENtityFrameworkCore, the ORM
 		- Microsoft.EnttyFrameworkCore 
 		- Microsoft.EnttyFrameworkCore.SqlServer
@@ -170,8 +172,45 @@
 				- ASB
 				- SQS
 				- Kafka
-			
+				- 
+		
+# Azure Kuerbetes Service
+- deployment.yaml
+	- Deployment COnfiguration
+		- Image
+			- Specify the PORT exposed by the Container 
+		- Resources
+			- CPU
+			- Memory 
+	- Service Configuration
+		- COmmunication Ports
+			- LOadBalancer
+			- Mapping between the LoadBalancer and the PORT exposed by the Container
+			- Protocal
+				- Http / Https
+		- IP Address 
+			- LoadBaancer
+				- Public IP
+				- 
+
+- kubectl apply -f deployment.yaml
 
 
+# Ocelot
+- AddOcelot() Service Method
+	- A COnfiuration in a memory of app that created a DIctionary of Maping gateway api with actual Services
+	- gatewayconfiguration.json file
+		- ROutes[{
+		   upstream
+			downstream		
+		}] 
+		- Actual Gatewayy Host COnfiguration
 
+# Observations
+- What if the actual MicroServices is down?
+	- Listening to Exception but so not bubble it
+		- Listent and Log the exception Type
+	- Retry the Call to Microservice in TimeSpan
+		- STill Failure then Fallback 
+- How the Data Can be shared with COnsistency across Services?
 

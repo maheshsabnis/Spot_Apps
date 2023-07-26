@@ -13,3 +13,7 @@
 
 2. DOckerize these APIs
 			
+# Date: 26-July-2023
+1. Enhance the Gateway app to add multiple Microservices in DOwnstream  w/o unloading gateway app
+2. IMplement this on the XML Assignment of Yesterday
+
