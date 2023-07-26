@@ -212,5 +212,8 @@
 		- Listent and Log the exception Type
 	- Retry the Call to Microservice in TimeSpan
 		- STill Failure then Fallback 
+	- Resiliency for Retry
+	- Circuit Breaker for Fallback
+	- Polly
 - How the Data Can be shared with COnsistency across Services?
 
